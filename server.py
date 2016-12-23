@@ -8,11 +8,6 @@ class MainHandler(tornado.web.RequestHandler):
     def get(self):
         self.render("main.html")
 
-    def post(self):
-        #new_value = int(self.get_argument("input1"))
-        #print("The new value is {}".format(new_value))
-        self.redirect("/")
-
 class UpdateHandler(tornado.web.RequestHandler):
     def get(self):
         args = { k: self.get_argument(k) for k in self.request.arguments }
