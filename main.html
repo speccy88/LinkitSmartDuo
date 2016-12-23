@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block script %}
+<script type=text/javascript>
+$(
+    function()
+    {
+        function sendData() {
+        data = {slider1: $("#slider1").val(), switch1: $("#switch1").val()};
+        $.getJSON('/_update', data);
+        }
+
+        $('#slider1').change(function()
+        {
+            sendData();
+        });
+        $('#switch1').change(function()
+        {
+            sendData();
+        });
+    }
+);
+</script>
+{% end %}
+
+{% block content %}
+<form>
+     {#
+     <label for="slider1">Choose a value:</label>
+     <input type="range" name="slider1" id="slider1" min="0" max="100" value="50">
+     <br>
+     #}
+     <label for="switch1">LED on/off:</label>
+     <select name="switch1" id="switch1" data-role="slider" data-mini="true">
+         <option value="off">Off</option>
+         <option value="on">On</option>
+     </select>
+ </form>
+{% end %}

@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Linkit Smart Duo</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/static/jquery.mobile-1.4.5.min.css" />
+        <script src="/static/jquery-1.11.1.min.js" ></script>
+        <script src="/static/jquery.mobile-1.4.5.min.js" ></script>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+
+            {% block style %}{% end %}
+            {#
+                <style>
+                h1 {white-space: normal;}
+                </style>
+            #}
+
+
+            {% block script %}{% end %}
+    </head>
+
+    <div data-role="page">
+        <div data-role="header">
+            {% block header %}
+            <h1 style="white-space: normal;">Linkit Smart Duo</h1>
+            {% end %}
+        </div>
+
+        <div role="main" class="ui-content">
+            {% block content %}{% end %}
+        </div>
+
+        {#
+        <div data-role="footer">
+            <h4>Footer content</h4>
+        </div>
+        #}
+    </div>
+</html>
