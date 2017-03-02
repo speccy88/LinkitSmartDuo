@@ -1,5 +1,5 @@
 # LinkitSmartDuo
-Template for Linkit Smart Duo - Pytohn/JQuery/Tornado/Arduino/Firmata
+Template for Linkit Smart Duo - Python/JQuery/Tornado/Arduino/Firmata
 
 ## Links 
 
